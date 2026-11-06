@@ -25,7 +25,7 @@ Merci de contribuer. Ce document décrit le workflow à suivre pour que le dép�
 
 Format : `type/description-courte-en-kebab-case`
 
-Exemples : `feat/deplacement-joueur`, `fix/collision-mur`, `docs/contributing`, `chore/setup-eslint`
+Exemples : `feat/deplacement-pion`, `fix/calcul-score`, `docs/regles-du-jeu`, `chore/config-lfs`
 
 ## Conventional Commits
 
@@ -56,8 +56,8 @@ footer optionnel (ex: BREAKING CHANGE: ..., Closes #12)
 Exemples :
 
 ```
-feat(player): ajouter le saut
-fix(ui): corriger l'affichage du menu pause
+feat(plateau): ajouter le déplacement des pions
+fix(tour): corriger le passage au joueur suivant
 docs: mettre à jour le guide de contribution
 feat!: refondre la structure des données
 ```
@@ -90,4 +90,6 @@ En contribuant, tu acceptes de respecter le [Code de conduite](CODE_OF_CONDUCT.m
 
 - Toujours commiter les fichiers `.meta` avec leurs assets.
 - Éviter de modifier la même scène ou le même prefab à plusieurs en parallèle : prévenir l'équipe avant, pour éviter les conflits difficiles à résoudre.
+- Les assets lourds (images, audio, modèles 3D) passent par Git LFS : installer `git lfs install` avant de cloner.
+- Réglages Unity requis : `Visible Meta Files` et `Force Text` (voir le README).
 - Ne pas commiter `Library/`, `Temp/`, `Logs/` ou `UserSettings/` (déjà dans `.gitignore`).
